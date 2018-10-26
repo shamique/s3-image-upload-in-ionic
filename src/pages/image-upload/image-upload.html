@@ -1,0 +1,23 @@
+<ion-header hideBackButton="true">
+  <ion-navbar>
+    <ion-title>Upload Image</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <img [src]="imageView" *ngIf="imageView" />
+  <ion-row>
+    <ion-col>
+      <ion-input type="text" placeholder="Image name" name="name" [(ngModel)]="imageName"></ion-input>
+    </ion-col>
+  </ion-row>
+  <br/>
+  <ion-row>
+    <ion-col>
+      <button ion-button class="submit-btn" full type="submit" (click)="openCamera()">Open Camera</button>
+    </ion-col>
+    <ion-col>
+      <button ion-button class="submit-btn" [disabled]="!imageName && !imageData" full type="submit" (click)="uploadPhoto()">Upload photo</button>
+    </ion-col>
+  </ion-row>
+</ion-content>

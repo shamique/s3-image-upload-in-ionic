@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic cognito app - Sign in 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <form (ngSubmit)="login()" #registerForm="ngForm">
+        <ion-row>
+          <ion-col>
+            <ion-list inset>
+              
+              <ion-item>
+                <ion-input type="text" placeholder="Email" name="email" [(ngModel)]="email" required></ion-input>
+              </ion-item>
+              
+              <ion-item>
+                <ion-input type="password" placeholder="Password" name="password" [(ngModel)]="password" required></ion-input>
+              </ion-item>           
+            </ion-list>
+          </ion-col>
+        </ion-row>
+        
+        <ion-row>
+          <ion-col class="signup-col">
+            <button ion-button class="submit-btn" full type="submit" [disabled]="!registerForm.form.valid">Login</button>
+          </ion-col>
+        </ion-row>           
+      </form>
+
+      <ion-row>
+        <ion-col class="signup-col">
+          <button ion-button class="submit-btn" full type="submit" [navPush]="signUpPage">Sign Up</button>
+        </ion-col>
+      </ion-row>  
+</ion-content>

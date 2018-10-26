@@ -1,0 +1,7 @@
+{
+  "name": "AWS_IONIC",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}
